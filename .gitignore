@@ -1,0 +1,14 @@
+data/
+output/
+models/
+*.tsv
+*.csv
+*.zip
+*.pkl
+*.joblib
+*.pt
+*.pth
+__pycache__/
+.ipynb_checkpoints/
+.env
+.venv/
