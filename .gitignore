@@ -1,14 +1,23 @@
-data/
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset and extracted files
+student_resource/
+__MACOSX/
+dataset/
+*.zip
+
+# Generated outputs
 output/
 models/
-*.tsv
-*.csv
-*.zip
 *.pkl
 *.joblib
-*.pt
-*.pth
-__pycache__/
-.ipynb_checkpoints/
+
+# Environment secrets
 .env
-.venv/
