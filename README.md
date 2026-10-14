@@ -7,7 +7,9 @@
 | Author | Role |
 |---|---|
 | **Devyansh Nigam** | Lead Developer & ML Engineer |
+| **Anandi Sah** | ML Engineer |
 | **Sejal Saquib** | Data & Research Analyst |
+| **Adarsh Prajapati** | Data & Research Analyst |
 
 ---
 
@@ -248,6 +250,14 @@ Contributions:
 - Model evaluation
 - Git/GitHub integration
 
+### Anandi Sah
+**ML Engineer**
+
+Contributions:
+- Machine learning model development
+- Feature engineering
+- Model evaluation and tuning
+
 ### Sejal Saquib
 **Data & Research Analyst**
 
@@ -257,6 +267,14 @@ Contributions:
 - Evaluation and error analysis
 - Experimental-result interpretation
 - Project documentation
+
+### Adarsh Prajapati
+**Data & Research Analyst**
+
+Contributions:
+- Data analysis and preprocessing
+- Research and literature review
+- Results documentation
 
 ## 📜 Status
 
