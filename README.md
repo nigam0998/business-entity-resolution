@@ -2,7 +2,7 @@
 
 > A multi-stage machine learning pipeline for resolving business entities across heterogeneous datasets.
 
-## 👥 Authors
+## Authors
 
 | Author | Role |
 |---|---|
@@ -13,13 +13,13 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Business entity resolution is the task of determining whether records from different datasets refer to the same real-world business.
 
 This project implements a multi-stage entity-resolution pipeline combining candidate generation, blocking techniques, similarity features, exact-name matching, and supervised machine learning.
 
-## 🎯 Objectives
+## Objectives
 
 - Identify potential matches between business records.
 - Reduce comparisons through candidate generation.
@@ -30,7 +30,7 @@ This project implements a multi-stage entity-resolution pipeline combining candi
 - Analyze false positives, false negatives, and missing candidates.
 - Evaluate the complete entity-resolution pipeline.
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```text
 Business Records
@@ -56,7 +56,7 @@ Threshold Optimization
 Final Matches
 ```
 
-## 🔍 Candidate Generation
+## Candidate Generation
 
 Candidate generation reduces the number of source-target comparisons.
 
@@ -76,7 +76,7 @@ An exact normalized business-name index is used to recover candidates missed by 
 
 Candidates from multiple blocking strategies are combined before ranking and classification.
 
-## 🧮 Feature Engineering
+## Feature Engineering
 
 The model uses multiple similarity and matching features:
 
@@ -91,7 +91,7 @@ The model uses multiple similarity and matching features:
 - Shared-token information
 - Candidate rank
 
-## 🤖 Machine Learning Model
+## Machine Learning Model
 
 The final classifier is Logistic Regression implemented using scikit-learn.
 
@@ -105,7 +105,7 @@ LogisticRegression(
 
 A StandardScaler is applied before Logistic Regression. Balanced class weights are used because of the strong class imbalance.
 
-## 📊 Dataset Split
+## Dataset Split
 
 | Dataset | Pairs | Positive | Negative |
 |---|---:|---:|---:|
@@ -113,7 +113,7 @@ A StandardScaler is applied before Logistic Regression. Balanced class weights a
 | Validation | 17,364 | 242 | 17,122 |
 | Test | 17,364 | 242 | 17,122 |
 
-## 📈 Final Model Results
+## Final Model Results
 
 The selected classification threshold was **0.95**.
 
@@ -134,7 +134,7 @@ Actual Negative   17049      73
 Actual Positive      39     203
 ```
 
-## 🔎 Candidate Generation Results
+## Candidate Generation Results
 
 Candidate generation was evaluated on **500 source entities**.
 
@@ -149,7 +149,7 @@ Candidate generation was evaluated on **500 source entities**.
 
 Candidate recall is separate from classifier recall. A genuine pair excluded during candidate generation cannot be recovered by the downstream classifier.
 
-## 🎚️ Threshold Analysis
+## Threshold Analysis
 
 The best observed F1-score occurred at threshold **0.95**:
 
@@ -157,7 +157,7 @@ The best observed F1-score occurred at threshold **0.95**:
 - Recall: **83.88%**
 - F1-score: **78.38%**
 
-## 🧪 Error & Missing-Candidate Analysis
+## Error & Missing-Candidate Analysis
 
 The analysis identified:
 
@@ -167,7 +167,7 @@ The analysis identified:
 
 Exact-name blocking recovered **85** of the 328 zero-candidate cases, giving an exact-name recovery rate of **25.91%**.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 business-entity-resolution/
@@ -184,7 +184,7 @@ business-entity-resolution/
 └── project source / notebooks
 ```
 
-## 📊 Generated Outputs
+## Generated Outputs
 
 | File | Description |
 |---|---|
@@ -195,7 +195,7 @@ business-entity-resolution/
 | `threshold_comparison.png` | Threshold performance comparison |
 | `FINAL_REPORT.md` | Detailed written project report |
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - Python
 - Pandas
@@ -205,13 +205,13 @@ business-entity-resolution/
 - Git
 - GitHub
 
-## ⚠️ Limitations
+## Limitations
 
 The primary limitation is candidate-generation recall. The final candidate-generation recall was **78.63%**, meaning some genuine matches were excluded before classification.
 
 The dataset also contains substantial class imbalance, addressed using balanced class weights.
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - More advanced blocking strategies
 - Phonetic name matching
@@ -224,7 +224,7 @@ The dataset also contains substantial class imbalance, addressed using balanced 
 - Improved recovery of missing candidate pairs
 - Larger and more diverse evaluation datasets
 
-## 📌 Key Findings
+## Key Findings
 
 1. Multiple blocking strategies provide complementary candidate coverage.
 2. Exact-name indexing can recover cases missed by token-based candidate generation.
@@ -232,11 +232,11 @@ The dataset also contains substantial class imbalance, addressed using balanced 
 4. The Logistic Regression classifier achieves a strong precision-recall balance at threshold 0.95.
 5. The final classifier achieves an F1-score of **78.38%**.
 
-## 📄 Project Report
+## Project Report
 
 The detailed report is available at `output/FINAL_REPORT.md`.
 
-## 👨‍💻 Authors
+## Authors
 
 ### Devyansh Nigam
 **Lead Developer & ML Engineer**
@@ -276,7 +276,7 @@ Contributions:
 - Research and literature review
 - Results documentation
 
-## 📜 Status
+## Status
 
 **Project Status: Completed**
 
